@@ -21,18 +21,15 @@ public class User extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotBlank
     @Size(max = 50)
     @Column(unique = true)
     private String username;
-
     @NotBlank
     @Size(max = 50)
     @Column(unique = true)
     @Email
     private String email;
-
     @NotBlank
     @Size(max = 120)
     private String password;
